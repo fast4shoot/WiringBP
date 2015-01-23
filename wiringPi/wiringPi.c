@@ -1935,9 +1935,7 @@ void pwmWrite (int pin, int value)
 		   return;
 		  }
 		  //if value changed chang it
-		  sunxi_pwm_set_enable(0);
 		  sunxi_pwm_set_act(value);
-		  sunxi_pwm_set_enable(1);
 		 } else {
 		  printf ("not on board :%s,%d\n", __func__, __LINE__) ;
 		  if ((node = wiringPiFindNode (pin)) != NULL){
